@@ -1,6 +1,7 @@
-import React,{useState,useEffect} from 'react'
-import './nav.scss'
-import { Link } from "react-router-dom";
+import React,{useState} from 'react'
+
+
+import { Nav, StyledLink } from './nav.styled'
 //滑進顯示all，預設是hw1，點擊是XX
 //延伸的動畫要做
 const HeaderComp = () => {
@@ -8,21 +9,21 @@ const HeaderComp = () => {
   const toggle = () => {
     setShow(!show);
   };
-  useEffect(()=>{
-    console.log("show: ", show);
-  },[show]);
 
   return (
-    <nav onMouseEnter={toggle} onMouseLeave={toggle}>
-      <ul>
-        <li>
-          <Link to="/hw1">hw1</Link>
-        </li>
-        <li>
-          <Link to="/">hw2</Link>
-        </li>
-      </ul>
-    </nav>
+    <Nav onMouseEnter={toggle} onMouseLeave={toggle}>
+      {show ? (
+        <ul className="links">
+          <StyledLink to="/hw1">Project1</StyledLink>
+          <StyledLink to="/hw2">Project2</StyledLink>
+          <StyledLink to="/">Project3</StyledLink>
+        </ul>
+      ) : (
+        <div className="more">
+          更<br />多
+        </div>
+      )}
+    </Nav>
   );
 }
 

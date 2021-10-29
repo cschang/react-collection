@@ -1,5 +1,5 @@
 import React from 'react'
-// import "./Hw2page.scss"
+
 import { ReactComponent as BeLogo } from "./media/behance.svg";
 import { ReactComponent as FBLogo } from "./media/facebook.svg";
 import { ReactComponent as IGLogo } from "./media/instagram.svg";

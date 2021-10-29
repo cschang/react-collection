@@ -4,11 +4,12 @@ nav {
   left: 10px;
   top: 50px;
   border-radius: 17px;
+  font-size: 2rem;
+  color: white;
+  .more{
+    margin: 10px 10px;
+  }
   ul {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-start;
-    // align-items: center;
     list-style-type: none;
     li {
       margin: 1rem;
@@ -18,7 +19,8 @@ nav {
         text-decoration: none;
       }
       & :hover {
-        background: red;
+        background: white;
+        color: black;
       }
     }
     
